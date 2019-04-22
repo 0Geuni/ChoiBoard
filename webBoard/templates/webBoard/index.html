@@ -1,0 +1,143 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ChoiBoard - 익명 게시판</title>
+    
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css" />
+  
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Gamja+Flower%7CNoto+Sans+KR%7CPoor+Story" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all/css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!-- Custom Style -->
+    <link rel="stylesheet" type="text/css" href="{% static 'webBoard/assets/css/index_style.css' %}">
+</head>
+<div>
+    <!-- Nav -->
+    <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+        <nav class="uk-navbar-container uk-navbar-transparent" style="padding:0px 10px 0px 10px" uk-sticky="animation: uk-animation-slide-top" uk-navbar style="position: relative; z-index: 980;">
+            <div class="uk-navbar-left">
+                <ul class="uk-navbar-nav">
+                    <a class="uk-navbar-item uk-logo" href="#">ChoiBoard</a>
+                </ul>
+            </div>
+
+            <div class="uk-navbar-right">
+                <ul class="uk-navbar-nav">
+                    <li><a href="#"><span uk-icon="pencil"></span></a></li>
+                    <li><a href="#">초이보드</a></li>
+                    <li><a href="#"><span uk-icon="user"></span></a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- container | 게시글 나오는 곳 padding 20 -->
+    <div class="uk-container">
+        <div class="uk-card uk-card-default uk-margin-small">
+            <div class="uk-card-header">
+                <div class="uk-grid-small uk-flex-middle" uk-grid>
+                    <div class="uk-width-expand">
+                        <h3 class="uk-card-title uk-margin-remove-bottom">벚꽃이 활짝! 벌써 봄이네요 ^ㅇ^</h3>
+                        <p class="uk-text-meta uk-margin-remove-top">
+                            <time datetime="2016-04-01T19:00">2019년 04월 12일 오후 1시 30분</time>
+                        </p>
+                    </div>
+                    <a class="uk-align-right uk-icon-link uk-margin-remove-bottom" uk-tooltip="더보기">
+                        <span uk-icon="more"></span>
+                        <div uk-dropdown="mode: click">
+                            <ul class="uk-nav uk-dropdown-nav">
+                                <li><a href="#">게시물로 이동</a></li>
+                                <li><a href="#">공유 하기</a></li>
+                                <li><a href="#">링크 복사</a></li>
+                                <li class="uk-nav-header">게시물 관리</li>
+                                <li><a href="#">수정</a></li>
+                                <li><a href="#">삭제</a></li>
+                                <li><a href="#" style="color: #f0506e">신고하기</a></li>
+                            </ul>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="uk-card-body uk-padding-remove">
+                <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow>
+                    <ul class="uk-slideshow-items">
+                        <li>
+                            <img data-src="http://www.younglimonynj.com/UploadFiles/images/cherryblossompath_forweb.jpg" alt="" uk-cover uk-img="target: !ul > :last-child, !* +*">
+                        </li>
+                        <li>
+                            <img data-src="http://cfile226.uf.daum.net/image/20435436515032A60D2322" alt="" uk-cover uk-img="target: !* -*, !* +*">
+                        </li>
+                        <li>
+                            <img data-src="https://cdn.discordapp.com/attachments/564395275700011009/567321576979169310/flower.jpg" alt="" uk-cover uk-img="target: !* -*, !ul > :first-child">
+                        </li>
+                        <li>
+                            <img data-src="https://s2.best-wallpaper.net/wallpaper/1920x1080/1801/Sakura-tree-flowers-bloom-beautiful-spring_1920x1080.jpg" alt="" uk-cover uk-img="target: !* -*, !ul > :first-child">
+                        </li>
+                    </ul>
+                    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+                </div>
+                <div class="uk-padding">
+                    하.. 오늘 길가는데 벚꽃이 만개하니 보기 이쁘네요!
+                </div>
+            </div>
+            <div class="uk-card-footer">
+                <a class="uk-align-left uk-icon-link uk-margin-remove-bottom" uk-tooltip="좋아요">
+                    <span uk-icon="heart"></span>
+                </a>
+                <a class="uk-align-left uk-icon-link uk-margin-remove-bottom" uk-tooltip="댓글 달기">
+                    <span uk-icon="comment"></span>
+                </a>
+                <a class="uk-align-left uk-icon-link uk-margin-remove-bottom" uk-tooltip="태그 보기" uk-toggle="target: #hashtag; animation: uk-animation-fade;">
+                    <span uk-icon="hashtag"></span>
+                </a>
+                <a class="uk-align-left uk-icon-link uk-margin-remove-bottom" uk-tooltip="공유">
+                    <span uk-icon="social"></span>
+                </a>
+                <a class="uk-align-right uk-icon-link uk-margin-remove-bottom" uk-tooltip="링크 복사">
+                    <span uk-icon="link"></span>
+                </a>
+            </div>
+            <div class="uk-card-footer" style="border-top: none;" id="hashtag" aria-hidden="true" hidden>
+                <a class="uk-icon-link" style="text-decoration: none;" href="#" class="uk-link-reset">#벚꽃</a>
+                <a class="uk-icon-link" style="text-decoration: none;" href="#" class="uk-link-reset">#연애</a>
+                <a class="uk-icon-link" style="text-decoration: none;" href="#" class="uk-link-reset">#이쁘다</a>
+                <a class="uk-icon-link" style="text-decoration: none;" href="#" class="uk-link-reset">#핑크색</a>
+                <a class="uk-icon-link" style="text-decoration: none;" href="#" class="uk-link-reset">#날씨</a>
+                <a class="uk-icon-link" style="text-decoration: none;" href="#" class="uk-link-reset">#꽃</a>
+                <a class="uk-icon-link" style="text-decoration: none;" href="#" class="uk-link-reset">#커플</a>
+            </div>
+            <div class="uk-card-footer" style="border-top: none;">
+                <div>
+                    <span style="color:rgb(46, 44, 56); font-weight: 400; font-size:18px;">최영근</span>
+                    <spna>그러게요 ㅠㅠ 요즘 벚꽃이 이쁘게 피었어요</spna>
+                </div>
+                <div>
+                    <span style="color:rgb(46, 44, 56); font-weight: 400; font-size:18px;">마인딩</span>
+                    <spna>벌써 새로운 계절이 다가오고 있네요.</spna>
+                </div>
+                <div>
+                    <span style="color:rgb(46, 44, 56); font-weight: 400; font-size:18px;">초이</span>
+                    <spna>저희 동네도 벚꽃이 많이 피었는데 여기도 그러네요</spna>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+
+    <!-- UIkit JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit-icons.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="{% static 'webBoard/assets/js/index_script.js' %}"></script>    
+</body>
+</html>

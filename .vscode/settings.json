@@ -1,0 +1,9 @@
+{
+    "sqltools.connections": [
+        {
+            "database": "C:\\Users\\dudrm\\OneDrive\\Desktop\\project\\Choi_Board\\db.sqlite3",
+            "dialect": "SQLite",
+            "name": "webBoard_Choi"
+        }
+    ]
+}
